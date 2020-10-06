@@ -12,8 +12,8 @@ namespace Notes.WebApp.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            Test test = new Test();
-            test.InsertTest();
+            //Test test = new Test();
+            //test.InsertTest();
 
             return View();
         }
