@@ -16,6 +16,10 @@ namespace Notes.BusinessLogicLayer
             List<Category> categoryList = repo_category.GetList();
             return categoryList;
         }
+        public Category GetCategoryById(int? id)
+        {
+            return repo_category.Find(p => p.Id == id);
+        }
 
     }
 }

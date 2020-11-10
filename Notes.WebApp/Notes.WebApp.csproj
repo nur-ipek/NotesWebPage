@@ -110,6 +110,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\login.css" />
     <Content Include="css\shop-homepage.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -125,6 +126,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\login.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Shared\_PartialCategories.cshtml" />
@@ -135,6 +137,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Init\WebCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +168,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\RegisterOk.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,6 +189,10 @@
     <ProjectReference Include="..\Notes.BusinessLogicLayer\Notes.BusinessLogicLayer.csproj">
       <Project>{a8d71562-5458-4838-8800-9288dcc8a313}</Project>
       <Name>Notes.BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Notes.Common\Notes.Common.csproj">
+      <Project>{37869c16-f15f-4551-9892-a56f5cd7260b}</Project>
+      <Name>Notes.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Notes.Entities\Notes.Entities.csproj">
       <Project>{7d505756-3653-438a-b90f-a0a6706601d5}</Project>

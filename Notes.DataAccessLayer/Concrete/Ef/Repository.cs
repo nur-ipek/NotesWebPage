@@ -5,9 +5,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Notes.Common;
 using Notes.DataAccessLayer;
 using Notes.DataAccessLayer.Abstract;
 using Notes.DataAccessLayer.Concrete.Ef;
+using Notes.Entities;
 
 namespace Notes.DataAccessLayer.Concrete
 {
@@ -33,6 +35,15 @@ namespace Notes.DataAccessLayer.Concrete
         public int Insert (T obj)
         {
             _objectSet.Add(obj);
+            if(obj is MyEntityBase)
+            {
+                MyEntityBase o = obj as MyEntityBase;
+                DateTime now = DateTime.Now;
+
+                o.CreatedOn = now;
+                o.ModifiedOn = now;
+                o.ModifiedUserName = App.Common.GetUsername();
+            }
             return Save();
         }
         public int Delete(T obj)
